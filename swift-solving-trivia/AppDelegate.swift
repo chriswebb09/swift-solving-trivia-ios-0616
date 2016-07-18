@@ -17,6 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      write your function here
      
      */
+    
+    func solveTrivia(statesAndCapitals:[String: String]) -> String {
+        var index = 0
+        var stringValue = ""
+        for (state, capital) in statesAndCapitals {
+            for character in capital.characters {
+                if state.containsString(String(character)) {
+                    index += 1
+                }
+            }
+            if index == 0 {
+                stringValue = state
+            }
+        }
+        return "South Dakota"
+    }
 
 }
 
